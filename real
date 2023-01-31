@@ -10,7 +10,7 @@ MainSection:NewButton("nieskonczony jeld", "fryta", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
-MainSection:NewSlider("Speed", "faster then a nigga can steal something", 500, 16, function(s) -- 500 (MaxValue) | 16 (MinValue)
+MainSection:NewSlider("Speed", "faster then a nigga can steal something", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
@@ -49,8 +49,17 @@ end)
 ItemsSection:NewButton("Drzewo 3", "rel", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1091.01038, 38.0000496, 468.13324, -0.86706847, -9.12073972e-08, 0.498188943, -7.75338123e-08, 1, 4.81348934e-08, -0.498188943, 3.10976067e-09, -0.86706847)
 end)
+--Berries
+local ItemsSection = Items:NewSection("jagodutki")
 
+ItemsSection:NewButton("jagody 1", "barabasz", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1384.08398, 106.000038, 435.084717, 0.551725507, -2.5984713e-08, -0.834025741, 2.79168777e-08, 1, -1.26881687e-08, 0.834025741, -1.62830087e-08, 0.551725507)
+end)
 
-Section:NewButton("ButtonText", "ButtonInfo", function()
-    print("Clicked")
+ItemsSection:NewButton("jagody 2", "barabasz", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-688.044128, 14.0000086, -179.020966, 0.673002064, 1.08640265e-07, 0.739640653, -7.8909963e-08, 1, -7.50819993e-08, -0.739640653, -7.83467513e-09, 0.673002064)
+end)
+
+ItemsSection:NewButton("jagody 3", "barabasz", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1440.42749, 57.9999886, -224.387115, 0.7823838, -7.06208336e-09, 0.622796595, 8.28600655e-09, 1, 9.30072241e-10, -0.622796595, 4.43282344e-09, 0.7823838)
 end)
