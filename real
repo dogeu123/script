@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("kazik - pmebge", "Midnight")
+local Window = Library.CreateLib("dogeu - pmebge", colors)
 
 --MAIN
 local Main = Window:NewTab("Main")
@@ -10,7 +10,7 @@ MainSection:NewButton("nieskonczony jeld", "fryta", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
-MainSection:NewSlider("Speed", "faster then a nigga can steal something", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+MainSection:NewSlider("Speed", "faster then a nigga can steal something", 500, 16, function(s) -- 500 (MaxValue) | 16 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
@@ -18,7 +18,7 @@ MainSection:NewButton("reset szybkosc", "no more nigga power", function()
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 end)
 
-MainSection:NewButton("Autofarm (gunpowder)", "no kurwa domysl sie", function()
+MainSection:NewButton("Autofarm (gunpowder sell)", "no kurwa domysl sie", function()
     while wait() do
 	wait(0.5)
 local args = {
@@ -41,6 +41,57 @@ game:GetService("ReplicatedStorage").Remotes.Shop:FireServer(unpack(args))
 end
 end)
 
+MainSection:NewButton("Autofarm (gold sell)", "zloto braciszku sicarios beng beng", function()
+    while wait() do
+	wait(0.5)
+local args = {
+    [1] = "gold",
+    [2] = false,
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Remotes.Shop:FireServer(unpack(args))
+
+wait(11)
+
+local args = {
+    [1] = "gold",
+    [2] = false,
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Shop"):FireServer(unpack(args))
+end
+end)
+
+MainSection:NewButton("Autofarm (flowers sell)", "kfiatki op", function()
+    while wait() do
+	wait(0.5)
+local args = {
+    [1] = "flowers",
+    [2] = false,
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Remotes.Shop:FireServer(unpack(args))
+
+wait(11)
+
+local args = {
+    [1] = "flowers",
+    [2] = false,
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Shop"):FireServer(unpack(args))
+end
+end)
+
+MainSection:NewButton("CLICK IF AUTOFARMIN (from far=patched)", "chowa cie i ten no patched na daleko ni chuja", function()
+    while wait() do
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1117.89746, -6.84888315, 16.7483807, -0.387077808, -0.916988611, 0.0964500159, 0.137275085, 0.0461261347, 0.989458382, -0.911770999, 0.396237582, 0.10802529)
+end
+end)
 
 --Items
 local Items = Window:NewTab("Item Teleport")
@@ -81,4 +132,99 @@ end)
 
 ItemsSection:NewButton("jagody 3", "barabasz", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1440.42749, 57.9999886, -224.387115, 0.7823838, -7.06208336e-09, 0.622796595, 8.28600655e-09, 1, 9.30072241e-10, -0.622796595, 4.43282344e-09, 0.7823838)
+end)
+
+--Misc
+local Teleports = Window:NewTab("Teleports")
+local TeleportsSection = Teleports:NewSection("Teleports")
+
+--Teleports
+TeleportsSection:NewButton("Peasant Spawn", "gdzies tak bedzie", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-384.97818, 22.0000076, 17.1130924, 0.0565185696, 8.50664605e-08, -0.998401523, -7.30625374e-08, 1, 8.10666521e-08, 0.998401523, 6.83639811e-08, 0.0565185696)
+end)
+
+TeleportsSection:NewButton("Viking Island", "gdzies tak bedzie", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1058.06934, 10.0000582, 8.09566402, 0.998573482, 2.65727582e-08, 0.0533945151, -2.3478405e-08, 1, -5.85799e-08, -0.0533945151, 5.7242719e-08, 0.998573482)
+end)
+
+TeleportsSection:NewButton("Civilian Spawn", "gdzies tak bedzie", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1337.66943, 35.0000343, -53.7106743, 0.00629612152, -5.88183937e-08, -0.999980152, -3.66179336e-08, 1, -5.90501124e-08, 0.999980152, 3.69889932e-08, 0.00629612152)
+end)
+
+TeleportsSection:NewButton("Pirate Island", "gdzies tak bedzie", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(276.082367, 6.20000124, -1506.26892, -0.999980569, -4.4730065e-08, 0.00623639859, -4.4553083e-08, 1, 2.8517352e-08, -0.00623639859, 2.82389472e-08, -0.999980569)
+end)
+
+TeleportsSection:NewButton("Witch house", "gdzies tak bedzie", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-666.881653, 10.0000086, -273.122284, 0.987690389, -3.76166263e-08, -0.156421378, 5.49364536e-08, 1, 1.06402211e-07, 0.156421378, -1.1368568e-07, 0.987690389)
+end)
+
+TeleportsSection:NewButton("evil brick god", "gdzies tak bedzie", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1125.82922, 33.5000496, 353.966858, 0.0251461416, -1.05642579e-08, -0.999683797, -7.1451062e-08, 1, -1.2364886e-08, 0.999683797, 7.17393931e-08, 0.0251461416)
+end)
+
+TeleportsSection:NewButton("brick god", "gdzies tak bedzie", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1520.4425, 105.40004, 402.467133, -0.999165893, 1.27308191e-08, 0.0408355817, 8.20535906e-09, 1, -1.10989099e-07, -0.0408355817, -1.10561452e-07, -0.999165893)
+end)
+
+--Buying stuff
+local Buy = Window:NewTab("Buying stuff")
+local BuySection = Buy:NewSection("Zakupywacze")
+
+BuySection:NewButton("Caik", "no zgadnij", function()
+    local args = {
+    [1] = "caik",
+    [2] = false,
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Shop"):FireServer(unpack(args))
+end)
+
+BuySection:NewButton("Passport", "no zgadnij", function()
+    local args = {
+    [1] = "probably real passport",
+    [2] = false,
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Shop"):FireServer(unpack(args))
+end)
+
+BuySection:NewButton("Bomb", "no zgadnij", function()
+    local args = {
+    [1] = "bomb",
+    [2] = false,
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Shop"):FireServer(unpack(args))
+end)
+
+BuySection:NewButton("Bred", "no zgadnij", function()
+    local args = {
+    [1] = "bred",
+    [2] = false,
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Shop"):FireServer(unpack(args))
+end)
+
+BuySection:NewButton("full belly potin", "no zgadnij", function()
+    local args = {
+    [1] = "FullBelly"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BrewPotion"):FireServer(unpack(args))
+end)
+
+BuySection:NewButton("Sword", "no zgadnij", function()
+    local args = {
+    [1] = "sword",
+    [2] = false,
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Shop"):FireServer(unpack(args))
 end)
