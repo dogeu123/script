@@ -18,8 +18,27 @@ MainSection:NewButton("reset szybkosc", "no more nigga power", function()
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 end)
 
-MainSection:NewButton("Autofarm ( aint workin in progress )", "no kurwa domysl sie", function()
-    print("Clicked")
+MainSection:NewButton("Autofarm (gunpowder)", "no kurwa domysl sie", function()
+    while wait() do
+	wait(0.5)
+local args = {
+    [1] = "gunpowder",
+    [2] = false,
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Remotes.Shop:FireServer(unpack(args))
+
+wait(11)
+
+local args = {
+    [1] = "gunpowder",
+    [2] = false,
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.Shop:FireServer(unpack(args))
+end
 end)
 
 
