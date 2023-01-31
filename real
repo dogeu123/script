@@ -10,11 +10,11 @@ MainSection:NewButton("nieskonczony jeld", "fryta", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
-MainSection:NewSlider("Speed", "faster then a n1gga can steal something", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+MainSection:NewSlider("Speed", "faster then a nigga can steal something", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
-MainSection:NewButton("reset szybkosc", "no more n1gga power", function()
+MainSection:NewButton("reset szybkosc", "no more nigga power", function()
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 end)
 
@@ -38,14 +38,19 @@ end)
 --japko tri
 local ItemsSection = Items:NewSection("Japka drzewne")
 
-ItemsSection:NewButton("Drzewo 1", "ButtonInfo", function()
-    -1514.3833, 110.000038, 521.065796, -0.696993709, -7.91518104e-08, -0.717077196, -2.42958542e-08, 1, -8.6765759e-08, 0.717077196, -4.30531877e-08, -0.696993709
+ItemsSection:NewButton("Drzewo 1", "rel", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1514.3833, 110.000038, 521.065796, -0.696993709, -7.91518104e-08, -0.717077196, -2.42958542e-08, 1, -8.6765759e-08, 0.717077196, -4.30531877e-08, -0.696993709)
 end)
 
-ItemsSection:NewButton("Drzewo 2", "ButtonInfo", function()
-    -433.46167, 10.0000086, -353.170776, 0.968935072, -3.864006e-08, 0.247315228, 1.73177401e-08, 1, 8.83904079e-08, -0.247315228, -8.13616268e-08, 0.968935072
+ItemsSection:NewButton("Drzewo 2", "rel", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-433.46167, 10.0000086, -353.170776, 0.968935072, -3.864006e-08, 0.247315228, 1.73177401e-08, 1, 8.83904079e-08, -0.247315228, -8.13616268e-08, 0.968935072)
 end)
 
-ItemsSection:NewButton("Drzewo 3", "ButtonInfo", function()
-    1091.01038, 38.0000496, 468.13324, -0.86706847, -9.12073972e-08, 0.498188943, -7.75338123e-08, 1, 4.81348934e-08, -0.498188943, 3.10976067e-09, -0.86706847
+ItemsSection:NewButton("Drzewo 3", "rel", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1091.01038, 38.0000496, 468.13324, -0.86706847, -9.12073972e-08, 0.498188943, -7.75338123e-08, 1, 4.81348934e-08, -0.498188943, 3.10976067e-09, -0.86706847)
+end)
+
+
+Section:NewButton("ButtonText", "ButtonInfo", function()
+    print("Clicked")
 end)
