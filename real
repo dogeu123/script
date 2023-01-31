@@ -10,7 +10,7 @@ MainSection:NewButton("nieskonczony jeld", "fryta", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
-MainSection:NewSlider("Speed", "faster then a nigga can steal something", 500, 16, function(s) -- 500 (MaxValue) | 17 (MinValue)
+MainSection:NewSlider("Speed", "faster then a nigga can steal something", 500, 16, function(s) -- 500 (MaxValue) | 16 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
