@@ -191,7 +191,7 @@ BuySection:NewButton("Passport", "no zgadnij", function()
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Shop"):FireServer(unpack(args))
 end)
 
-BuySection:NewButton("Bomb", "no zgadnij", function()
+BuySection:NewButton("Bomb", "jaro", function()
     local args = {
     [1] = "bomb",
     [2] = false,
